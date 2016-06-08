@@ -1,9 +1,9 @@
 import os, glob, sys, subprocess
 
-VENV_DIRECTORY='env'
-VENV_PROMPT='higgsml'
-ACTIVATE_LINK='activate'
-REQUIREMENTS='requirements/requirements*.txt'
+VENV_DIRECTORY = 'env'
+VENV_PROMPT = 'higgsml'
+ACTIVATE_LINK = 'activate'
+REQUIREMENTS = 'requirements/requirements*.txt'
 
 def create_venv():
     opts = ['virtualenv',
