@@ -1,5 +1,5 @@
 # higgsml-sklearn
-A demonstration of scikit-learn using the Higgs Boson Machine Learning Challenge dataset.
+A demonstration of scikit-learn using the [Higgs Boson Machine Learning Challenge](https://higgsml.lal.in2p3.fr) dataset.
 
 ## Prerequisites
 * Python (version 2.7.9 or greater, untested on Python 3)
