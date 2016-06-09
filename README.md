@@ -21,7 +21,7 @@ A demonstration of scikit-learn using the Higgs Boson Machine Learning Challenge
     python setup.py
     ```
 
-If the last step fails, try `python2.7 setup.py`.
+    If the last step fails, try `python2.7 setup.py`.
 
 3. Activate the higgsml virtual environment:
 
@@ -40,7 +40,7 @@ If the last step fails, try `python2.7 setup.py`.
     ```bash
     jupyter notebook
     ```
-    
+
 6. Click on `Tutorial.ipynb` in the browser to walk through the tutorial.
 
 ## Troubleshooting
