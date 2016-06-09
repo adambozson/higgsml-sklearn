@@ -2,7 +2,7 @@
 A demonstration of scikit-learn using the Higgs Boson Machine Learning Challenge dataset.
 
 ## Prerequisites
-* Python (version 2.7)
+* Python (version 2.7.9 or greater, untested on Python 3)
 * virtualenv -- install with pip, or [manually](https://virtualenv.pypa.io/en/stable/installation/)
 
 (Tested on Linux and Mac.)
@@ -12,30 +12,25 @@ A demonstration of scikit-learn using the Higgs Boson Machine Learning Challenge
 ```bash
 git clone https://github.com/adambozson/higgsml-sklearn.git
 ```
-
 2. Run the setup script:
 ```bash
 cd higgsml-sklearn
 python setup.py
 ```
-(Try `python2.7 setup.py` if the last step fails.)
-
+If the last step fails, try `python2.7 setup.py`.
 3. Activate the higgsml virtual environment:
 ```bash
 source activate
 ```
-
 4. Download the data file:
 ```bash
 python download_data.py
 ```
-
 5. Start up the Jupyter notebook server:
 ```bash
 jupyter notebook
 ```
-
-6. Click on `Tutorial.ipynb` to walk through the tutorial.
+6. Click on `Tutorial.ipynb` in the browser to walk through the tutorial.
 
 ## Troubleshooting
 Make sure the higgsml virtual environment is activated (run `source activate` from the main higgsml-sklearn directory).
