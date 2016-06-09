@@ -16,7 +16,7 @@ if major < 3 and (major == 2 and minor < 7):
 def create_venv():
     opts = ['virtualenv',
             '--prompt={}'.format(VENV_PROMPT),
-            '--python={}'.format(sys.executable)
+            '--python={}'.format(sys.executable),
             VENV_DIRECTORY]
     try:
         subprocess.call(opts)
