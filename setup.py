@@ -7,7 +7,7 @@ REQUIREMENTS = 'requirements/requirements*.txt'
 
 # Check the python version
 major = sys.version_info[0]
-minor = sus.version_info[1]
+minor = sys.version_info[1]
 if major < 3 and (major == 2 and minor < 7):
     print('Requires at least Python 2.7')
     sys.exit(1)
