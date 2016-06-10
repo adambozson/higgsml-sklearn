@@ -43,6 +43,9 @@ A demonstration of scikit-learn using the [Higgs Boson Machine Learning Challeng
 
 6. Click on `Tutorial.ipynb` in the browser to walk through the tutorial.
 
+## Scripted analysis
+A set of scripts for training and analysis are in the `python` directory. From the project directory, run `python python/train.py` to train the default model. Then run `python python/analysis.py` to calculate the expected discovery significance.
+
 ## Troubleshooting
 Make sure the higgsml virtual environment is activated (run `source activate` from the main higgsml-sklearn directory).
 
@@ -56,8 +59,4 @@ There will be a line similar to
 ```shell
 [I 17:22:38.962 NotebookApp] The Jupyter Notebook is running at: http://localhost:XXXX/
 ```
-in the output, where `XXXX` is the port number (default is 8888). Use the SSH magic key combination, normally <kbd>Enter</kbd>+<kbd>~</kbd>+<kbd>C</kbd> to enter the SSH prompt. Then enter
-```shell
--L XXXX:localhost:XXXX
-```
-and point the web browser on your *local* machine to [http://localhost:XXXX/](http://localhost:XXXX/).
+in the output, where `XXXX` is the port number (default is 8888). Use the SSH magic key combination, normally <kbd>Enter</kbd>+<kbd>~</kbd>+<kbd>C</kbd> to enter the SSH prompt. Then enter `-L XXXX:localhost:XXXX` and point the web browser on your *local* machine to [http://localhost:XXXX/](http://localhost:XXXX/).
