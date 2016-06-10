@@ -60,4 +60,4 @@ in the output, where `XXXX` is the port number (default is 8888). Use the SSH ma
 ```shell
 -L XXXX:localhost:XXXX
 ```
-and point the web browser on your *local* machine at [http://localhost:XXXX/](http://localhost:XXXX/).
+and point the web browser on your *local* machine to [http://localhost:XXXX/](http://localhost:XXXX/).
