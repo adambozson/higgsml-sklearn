@@ -8,10 +8,10 @@ REQUIREMENTS = 'requirements/requirements*.txt'
 # Check the python version
 major = sys.version_info[0]
 minor = sys.version_info[1]
-if major < 3 and (major == 2 and minor < 7):
-    print('Requires at least Python 2.7')
+patch = sys.version_info[2]
+if (major == 2 and minor < 7 and patch < 9) or (major < 2):
+    print('Requires at least Python 2.7.9')
     sys.exit(1)
-
 
 def create_venv():
     opts = ['virtualenv',
