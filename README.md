@@ -44,7 +44,7 @@ A demonstration of scikit-learn using the [Higgs Boson Machine Learning Challeng
 6. Click on `Tutorial.ipynb` in the browser to walk through the tutorial.
 
 ## Scripted analysis
-A set of scripts for training and analysis are in the `python` directory. From the project directory, run `python python/train.py` to train the default model. Then run `python python/analysis.py` to calculate the expected discovery significance.
+A set of scripts for training and analysis are in the `python` directory. From the project directory, run `python python/BDT200/train.py` to train the TMVA-like model. Then run `python python/BDT200/analysis.py` to calculate the expected discovery significance.
 
 ## Troubleshooting
 Make sure the higgsml virtual environment is activated (run `source activate` from the main higgsml-sklearn directory).
