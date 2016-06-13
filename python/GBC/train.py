@@ -40,7 +40,6 @@ def train_cv(clf, X, y, w):
 
 if __name__ == '__main__':
     TRAIN_DATA = 'atlas-higgs-challenge-2014-v2_train.csv'
-    OUTPUT = 'GBC.pkl'
 
     args = parse_args()
 
