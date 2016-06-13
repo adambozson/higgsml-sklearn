@@ -23,7 +23,7 @@ def make_GBC(n_estimators=100, max_depth=3,
                                       min_weight_fraction_leaf=min_weight_fraction_leaf,
                                       max_depth=max_depth,
                                       max_features=max_features,
-                                      verbose=2)
+                                      verbose=1)
 
 def fold_score(clf, X, y, w, train_idx, test_idx):
     clf = clf.fit(X.values[train_idx], y.values[train_idx],
