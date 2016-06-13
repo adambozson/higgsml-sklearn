@@ -20,8 +20,8 @@ def gbc_cv(**args):
     end_time = time.time()
     print 'Completed in {}'.format(utils.delta_time(start_time, end_time))
 
-    return mean_score
+    return 1 - mean_score
 
 def main(job_id, params):
     print 'Parameters: {}'.format(params)
-    return 1.0
+    return gbc_cv(**params)
