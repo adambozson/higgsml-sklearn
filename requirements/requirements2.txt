@@ -6,6 +6,7 @@ clint==0.5.1
 configparser==3.5.0
 cycler==0.10.0
 decorator==4.0.10
+dill==0.2.5
 entrypoints==0.2.2
 functools32==3.2.3.post2
 ipykernel==4.3.1

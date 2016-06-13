@@ -18,7 +18,7 @@ if __name__ == '__main__':
     stratify_column = args['stratify']
 
     data = pd.read_csv(input_path)
-    
+
     if stratify_column is None:
         labels = None
     else:
@@ -30,5 +30,5 @@ if __name__ == '__main__':
     train_path = input_path_split[0] + '_train' + input_path_split[1]
     test_path = input_path_split[0] + '_test' + input_path_split[1]
 
-    train.to_csv(train_path)
-    test.to_csv(test_path)
+    train.to_csv(train_path, index=False)
+    test.to_csv(test_path, index=False)
