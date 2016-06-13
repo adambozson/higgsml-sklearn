@@ -1,6 +1,6 @@
 {
     "language": "PYTHON",
-    "main-file": "spearmint.py",
+    "main-file": "higgsml-GBC.py",
     "experiment-name": "higgsml-GBC",
     "variables": {
       "n_estimators": {
