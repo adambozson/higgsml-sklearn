@@ -1,4 +1,4 @@
-import utils, argparse, dill, numpy, time
+import utilities, argparse, dill, numpy, time
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.cross_validation import cross_val_score, StratifiedKFold
 from sklearn.metrics import f1_score
@@ -23,7 +23,7 @@ def make_GBC(n_estimators=100, max_depth=3,
                                       min_weight_fraction_leaf=min_weight_fraction_leaf,
                                       max_depth=max_depth,
                                       max_features=max_features,
-                                      verbose=1)
+                                      verbose=2)
 
 def fold_score(clf, X, y, w, train_idx, test_idx):
     clf = clf.fit(X.values[train_idx], y.values[train_idx],
@@ -40,14 +40,15 @@ def train_cv(clf, X, y, w):
 
 if __name__ == '__main__':
     TRAIN_DATA = 'atlas-higgs-challenge-2014-v2_train.csv'
+    OUTPUT = 'GBC.pkl'
 
     args = parse_args()
 
     log.info('Reading data from {}'.format(TRAIN_DATA))
-    X, y, w = utils.get_data_labels_weights(TRAIN_DATA)
+    X, y, w = utilities.get_data_labels_weights(TRAIN_DATA)
 
     log.info('Renormalising weights')
-    w_norm = utils.normalise_weights(w, y)
+    w_norm = utilities.normalise_weights(w, y)
 
     gbc = make_GBC(**args)
     log.info('Created classifier\n{}'.format(gbc))
@@ -56,5 +57,5 @@ if __name__ == '__main__':
     start_time = time.time()
     mean_score = train_cv(gbc, X, y, w_norm)
     end_time = time.time()
-    log.info('Completed in {}'.format(utils.delta_time(start_time, end_time)))
+    log.info('Completed in {}'.format(utilities.delta_time(start_time, end_time)))
     print 'Mean cross-validation score: {}'.format(mean_score)
