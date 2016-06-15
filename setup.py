@@ -1,7 +1,7 @@
 import os, glob, sys, subprocess
 
 VENV_DIRECTORY = 'env'
-VENV_PROMPT = 'higgsml'
+VENV_PROMPT = '[higgsml] '
 ACTIVATE_LINK = 'activate'
 REQUIREMENTS = 'requirements/requirements*.txt'
 
