@@ -14,6 +14,8 @@ def parse_args():
     parser.add_argument('--max_depth', type=int, default=3)
     parser.add_argument('--min_weight_fraction_leaf', type=float, default=.05)
     parser.add_argument('--max_features', type=int, default=None)
+    parser.add_argument('--save', '-s',
+                        metavar='SAVE_FILE', nargs='?', const='GBC.pkl')
     return vars(parser.parse_args())
 
 def make_GBC(n_estimators=100, max_depth=3,
@@ -43,6 +45,7 @@ if __name__ == '__main__':
     OUTPUT = 'GBC.pkl'
 
     args = parse_args()
+    save_arg = args.pop('save')
 
     log.info('Reading data from {}'.format(TRAIN_DATA))
     X, y, w = utilities.get_data_labels_weights(TRAIN_DATA)
@@ -59,3 +62,7 @@ if __name__ == '__main__':
     end_time = time.time()
     log.info('Completed in {}'.format(utilities.delta_time(start_time, end_time)))
     print 'Mean cross-validation score: {}'.format(mean_score)
+
+    if save_arg:
+        log.info('Saving classifier as {}'.format(save_arg))
+        utilities.save(gbc, save_arg)
