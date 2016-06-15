@@ -2,7 +2,7 @@
 # Configuration in config.json
 
 from train import make_GBC
-from sv import train_cv
+from cv import train_cv
 from utilities import get_data_labels_weights, normalise_weights, delta_time
 import time
 
