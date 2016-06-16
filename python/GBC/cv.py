@@ -1,6 +1,5 @@
 import utilities, argparse, dill, numpy, time
 from train import make_GBC
-from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.cross_validation import cross_val_score, StratifiedKFold
 from sklearn.metrics import f1_score
 from joblib import Parallel, delayed

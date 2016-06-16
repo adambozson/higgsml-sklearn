@@ -1,8 +1,5 @@
-import utilities, argparse, dill, numpy, time
+import utilities, argparse, time
 from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.cross_validation import cross_val_score, StratifiedKFold
-from sklearn.metrics import f1_score
-from joblib import Parallel, delayed
 
 import logging
 logging.basicConfig(level=logging.INFO)
