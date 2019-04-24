@@ -1,0 +1,31 @@
+{
+    "language": "PYTHON",
+    "main-file": "higgsml-GBC.py",
+    "experiment-name": "higgsml-GBC",
+    "variables": {
+      "n_estimators": {
+        "type": "INT",
+        "size": 1,
+        "min": 50,
+        "max": 300
+      },
+      "max_depth": {
+        "type": "INT",
+        "size": 1,
+        "min": 1,
+        "max": 10
+      },
+      "min_weight_fraction_leaf": {
+        "type": "FLOAT",
+        "size": 1,
+        "min": 1e-6,
+        "max": 0.2
+      },
+      "max_features": {
+        "type": "INT",
+        "size": 1,
+        "min": 5,
+        "max": 30
+      }
+    }
+}
