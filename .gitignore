@@ -1,6 +1,4 @@
-env/
 .ipynb_checkpoints/
-activate
 
 *.pyc
 *.pkl

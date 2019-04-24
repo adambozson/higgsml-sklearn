@@ -1,57 +1,26 @@
 # higgsml-sklearn
 A demonstration of scikit-learn using the [Higgs Boson Machine Learning Challenge](https://higgsml.lal.in2p3.fr) dataset.
 
-## Prerequisites
-* Python (version 2.7.9 or greater, untested on Python 3)
-* virtualenv -- install with pip, or [manually](https://virtualenv.pypa.io/en/stable/installation/)
-
-(Tested on Linux and Mac.)
-
-## Getting started
-1. Clone (or download) this repo:
-
-    ```bash
-    git clone https://github.com/adambozson/higgsml-sklearn.git
-    ```
-
-2. Run the setup script:
-
-    ```bash
-    cd higgsml-sklearn
-    python setup.py
-    ```
-
-    If the last step fails, try `python2.7 setup.py`.
-
-3. Activate the higgsml virtual environment:
-
-    ```bash
-    source activate
-    ```
-
-4. Download the data file:
+1. Download the data file:
 
     ```bash
     python download_data.py
     ```
 
-5. Start up the Jupyter notebook server:
+2. Start up the Jupyter notebook server:
 
     ```bash
     jupyter notebook
     ```
 
-6. Click on `Tutorial.ipynb` in the browser to walk through the tutorial.
+3. Click on `Tutorial.ipynb` in the browser to walk through the tutorial.
 
 ## Scripted analysis
 A set of scripts for training and analysis are in the `python` directory. From the project directory, run `python python/BDT200/train.py` to train the TMVA-like model. Then run `python python/BDT200/analysis.py` to calculate the expected discovery significance.
 
-## Troubleshooting
-Make sure the higgsml virtual environment is activated (run `source activate` from the main higgsml-sklearn directory).
-
 ## Tips & tricks
 ### Working over SSH
-You may wish to run on a more powerful, air-conditioned machine over an SSH connection. In this case, use port forwarding to access the Jupyter notebooks. In Step 5 above, start the notebook server with
+You may wish to run on a more powerful, air-conditioned machine over an SSH connection. In this case, use port forwarding to access the Jupyter notebooks. In Step 2 above, start the notebook server with
 ```bash
 jupyter notebook --no-browser
 ```
